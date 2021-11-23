@@ -18,7 +18,7 @@ b = img.shape[1]
        # img[i,j][2] = 0 - min(img[i,j])
         #img[i,j][1] = 0 - min(img[i,j])
         #img[i,j][0] = 0 - min(img[i,j])
-#Autre facon avec une methode pour extraire le cyan
+#Autre facon avec une methode pour extraire le cyan : non trouvée
 
 image = cv.cvtColor(img, cv.COLOR_BGR2Luv)
 
