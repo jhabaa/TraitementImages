@@ -17,9 +17,17 @@ def projection ():
         for y in range(a):
             level += bwImage[x,y]
         #Moyenne de cette somme à la fin de chaque ligne
-        level = level/(a)
+        level = int(level/(a))
+        #Poser le point
+        Point = cv.rectangle(tab,(x+11,280-level), (x+11,280-level), color=(0,0,255), thickness=2)
 
+def repere(): #Ceci est un repère.
+    X = cv.line(tab, (10,280),(280,280), color=(0,255,0), thickness=2)
+    Y = cv.line(tab,(10,280), (10,20), color=(0,255,0), thickness=2)
 
+print (a,b)
+repere()
+projection()
 cv.imshow("OriginalImage",bwImage)
 cv.imshow("Tab", tab)
 cv.waitKey(0)
